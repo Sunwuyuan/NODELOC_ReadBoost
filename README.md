@@ -1,6 +1,10 @@
 # NODELOC ReadBoost
 
-[NODELOC ReadBoost](https://greasyfork.org/scripts/519843-NODELOC-readboost)，一款润物细无声的脚本，解放双手，自动化刷取NODELOC论坛的已读帖数  
+> [!IMPORTANT]  
+> 此程序由adodo为LINUX DO 社区开发，你可以在[LDO#283062](https://linux.do/t/topic/283062)了解
+> 
+> 
+[NODELOC ReadBoost](https://greasyfork.org/scripts/540310-NODELOC-readboost)，一款润物细无声的脚本，解放双手，自动化刷取NODELOC论坛的已读帖数  
 开源、温和，支持自定义参数，理论支持所有使用Discourse程序的论坛  
 ⚠️：使用第三方脚本，存在失效、封号等潜在的风险，作为一款完全开源的脚本，支持使用者自行审核，请勿将脚本用于商业用途，开发者不对造成的后果负责 ，
 
@@ -10,11 +14,11 @@
 
 安装脚本后，只随意打开一个NODELOC论坛的帖子，并在弹窗中同意使用许可，即可在右上角找到ReadBoost的设置菜单和指示栏
 
-在默认情况下，脚本设置为`手动`模式，建议在设置菜单中勾选自动运行选项，并保持默认的设置参数，点击保存即可观察到脚本指示栏中出现运行状态
+在默认情况下，脚本设置为`自动`模式，建议在设置菜单中勾选自动运行选项，并保持默认的设置参数，点击保存即可观察到脚本指示栏中出现运行状态
 
 ## 安全性
 
-[NODELOC ReadBoost](https://greasyfork.org/scripts/519843-NODELOC-readboost) 完全免费、开源，使用者可以自由查看并判断风险，开发者不对任何风险负责，也不对任何功能承诺，使用者需要自行承担使用该脚本的后果  
+[NODELOC ReadBoost](https://greasyfork.org/scripts/540310-NODELOC-readboost) 完全免费、开源，使用者可以自由查看并判断风险，开发者不对任何风险负责，也不对任何功能承诺，使用者需要自行承担使用该脚本的后果  
 本脚本无意主动与论坛的检测机制对抗，可能存在一定潜在的的检测特征
 
 
