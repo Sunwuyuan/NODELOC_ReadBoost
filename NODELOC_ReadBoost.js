@@ -1,17 +1,17 @@
 // ==UserScript==
-// @name        LINUXDO ReadBoost
-// @namespace   linux.do_ReadBoost
-// @match       https://linux.do/t/topic/*
+// @name        NODELOC ReadBoost
+// @namespace   nodeloc.cc_ReadBoost
+// @match       https://nodeloc.cc/t/topic/*
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @version     1.1
 // @author      Do
-// @description LINUXDO_ReadBoost是一个LINUXDO刷取已读帖量脚本，理论上支持所有Discourse论坛
+// @description NODELOC_ReadBoost是一个NODELOC刷取已读帖量脚本，理论上支持所有Discourse论坛
 // ==/UserScript==
 
 const hasAgreed = GM_getValue("hasAgreed", false)
 if (!hasAgreed) {
-    const userInput = prompt("[ LINUXDO ReadBoost ]\n检测到这是你第一次使用LINUXDO ReadBoost，使用前你必须知晓：使用该第三方脚本可能会导致包括并不限于账号被限制、被封禁的潜在风险，脚本不对出现的任何风险负责，这是一个开源脚本，你可以自由审核其中的内容，如果你同意以上内容，请输入“明白”")
+    const userInput = prompt("[ NODELOC ReadBoost ]\n检测到这是你第一次使用NODELOC ReadBoost，使用前你必须知晓：使用该第三方脚本可能会导致包括并不限于账号被限制、被封禁的潜在风险，脚本不对出现的任何风险负责，这是一个开源脚本，你可以自由审核其中的内容，如果你同意以上内容，请输入“明白”")
     if (userInput !== "明白") {
         alert("您未同意风险提示，脚本已停止运行。")
         throw new Error("未同意风险提示")
@@ -28,7 +28,7 @@ const repliesInfo = document.querySelector("div[class=timeline-replies]").textCo
 const [currentPosition, totalReplies] = repliesInfo.split("/").map(part => parseInt(part.trim(), 10))
 const csrfToken = document.querySelector("meta[name=csrf-token]").getAttribute("content")
 
-console.log("LINUXDO ReadBoost 已加载")
+console.log("NODELOC ReadBoost 已加载")
 console.log(`帖子ID：${topicID}`)
 console.log(`当前位置：${currentPosition}`)
 console.log(`总回复：${totalReplies}`)
@@ -47,7 +47,7 @@ let config = { ...DEFAULT_CONFIG, ...getStoredConfig() }
 
 // 设置按钮和状态UI
 const settingsButton = createButton("设置", "settingsButton", "btn-icon-text")
-const statusLabel = createStatusLabel("LINUXDO ReadBoost待命中")
+const statusLabel = createStatusLabel("NODELOC ReadBoost待命中")
 
 headerButtons.appendChild(statusLabel)
 headerButtons.appendChild(settingsButton)
@@ -233,7 +233,7 @@ function showSettingsUI() {
     // 启用高级设置告警弹窗
     document.getElementById("advancedMode").addEventListener("change", (event) => {
         if (event.target.checked) {
-            const userInput = prompt("[ LINUXDO ReadBoost ]\n如果你不知道你在修改什么，那么不建议开启高级设置，随意修改可能会提高脚本崩溃、账号被禁等风险的可能！请输入 '明白' 确认继续开启高级设置：")
+            const userInput = prompt("[ NODELOC ReadBoost ]\n如果你不知道你在修改什么，那么不建议开启高级设置，随意修改可能会提高脚本崩溃、账号被禁等风险的可能！请输入 '明白' 确认继续开启高级设置：")
 
             if (userInput !== "明白") {
                 alert("您未确认风险，高级设置未启用。")
@@ -282,7 +282,7 @@ async function startReading(topicId, totalReplies) {
     async function sendBatch(startId, endId, retryCount = 3) {
         const params = createBatchParams(startId, endId)
         try {
-            const response = await fetch("https://linux.do/topics/timings", {
+            const response = await fetch("https://nodeloc.cc/topics/timings", {
                 headers: {
                     "accept": "*/*",
                     "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -297,7 +297,7 @@ async function startReading(topicId, totalReplies) {
                     "x-requested-with": "XMLHttpRequest",
                     "x-silence-logger": "true"
                 },
-                referrer: `https://linux.do/`,
+                referrer: `https://nodeloc.cc/`,
                 body: params.toString(),
                 method: "POST",
                 mode: "cors",
