@@ -1,9 +1,11 @@
 # NODELOC ReadBoost
 
+
 > [!IMPORTANT]  
 > 此程序由adodo为LINUX DO 社区开发，你可以在[LDO#283062](https://linux.do/t/topic/283062)了解
-> 
-> 
+
+
+
 [NODELOC ReadBoost](https://greasyfork.org/scripts/540310-NODELOC-readboost)，一款润物细无声的脚本，解放双手，自动化刷取NODELOC论坛的已读帖数  
 开源、温和，支持自定义参数，理论支持所有使用Discourse程序的论坛  
 ⚠️：使用第三方脚本，存在失效、封号等潜在的风险，作为一款完全开源的脚本，支持使用者自行审核，请勿将脚本用于商业用途，开发者不对造成的后果负责 ，
